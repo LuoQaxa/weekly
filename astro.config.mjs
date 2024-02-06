@@ -17,16 +17,18 @@ function defaultLayoutPlugin() {
       file.data.astro.frontmatter.pic = imageElement.getAttribute("src");
     }
 
-    // 描述放到文档中头图的下一行，会自动帮你处理，也可以用 frontmatter 方式，赋值给 desc 字段
     if (tree.children[1]?.children[1]?.value) {
-      file.data.astro.frontmatter.desc = tree.children[1].children[1].value;
+      frontmatter.desc = tree.children[1].children[1].value;
     }
 
-    const { date, desc, pic } = file.data.astro.frontmatter;
+    frontmatter.desc = frontmatter.desc || SITE.description;
+    frontmatter.pic = frontmatter.pic || SITE.pic;
 
-    // 兼容没有描述情况
-    if (!desc) {
-      file.data.astro.frontmatter.desc = SITE.description;
+    if (!frontmatter.date) {
+      frontmatter.date =
+        SITE.repo === WEEKLY_REPO_NAME
+          ? getWeeklyDateFormat(filePath.split("/posts/")[1].split("-")[0])
+          : getCreateDateFormat(filePath);
     }
 
     // 兼容没有头图的情况
@@ -44,11 +46,9 @@ function defaultLayoutPlugin() {
   };
 }
 
-// https://astro.build/config
 export default defineConfig({
   integrations: [react(), tailwind()],
   markdown: {
     remarkPlugins: [defaultLayoutPlugin],
-    extendDefaultPlugins: true,
   },
 });
