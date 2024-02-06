@@ -1,5 +1,5 @@
 export const SITE = {
-  title: "潮流周刊",
+  title: "那狗子生活周刊",
   author: "LuoQ",
   description: "记录工程师 LuoQ 的不枯燥生活，每周一发布，欢迎关注",
   keywords: "LuoQ,Blog,前端,周记,生活",
