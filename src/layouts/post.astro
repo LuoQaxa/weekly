@@ -1,13 +1,13 @@
 ---
-import '../styles/heti.min.css';
-import HeadCommon from '../components/HeadCommon.astro';
-import HeadSEO from '../components/HeadSEO.astro';
-import Footer from '../components/Footer.astro';
-import AstroLogo from '../components/Header/AstroLogo.astro';
-import LeftSidebar from '../components/LeftSidebar.astro';
-import Search from '../components/Header/Search.astro';
-import { SITE } from '@/config';
-import { parseTitle, sortPosts, getIndex } from '@/util';
+import "../styles/heti.min.css";
+import HeadCommon from "../components/HeadCommon.astro";
+import HeadSEO from "../components/HeadSEO.astro";
+import Footer from "../components/Footer.astro";
+import AstroLogo from "../components/Header/AstroLogo.astro";
+import LeftSidebar from "../components/LeftSidebar.astro";
+import Search from "../components/Header/Search.astro";
+import { SITE } from "@/config";
+import { parseTitle, sortPosts, getIndex } from "@/util";
 
 export interface Props {
   frontmatter: { date: any; pic: any; desc: any; url: any; twitterImg: any };
@@ -29,14 +29,14 @@ const content = {
 const currentUrl = SITE.homePage + currentPage;
 
 // 或者下一篇文章
-const posts = await Astro.glob('../pages/posts/*.md');
+const posts = await Astro.glob("../pages/posts/*.md");
 const allPosts = sortPosts(posts);
 const postIndex = getIndex(currentPage);
-let nextUrl = '';
+let nextUrl = "";
 if (postIndex > 2) {
   nextUrl = allPosts[allPosts.length - postIndex + 1].url;
 }
-let prevUrl = '';
+let prevUrl = "";
 if (postIndex < allPosts.length) {
   prevUrl = allPosts[allPosts.length - postIndex - 1].url;
 }
@@ -246,21 +246,20 @@ if (postIndex < allPosts.length) {
         </div>
         <script
           src="https://giscus.app/client.js"
-          data-repo={SITE.repo}
-          data-repo-id="R_kgDOG4TsQA"
+          data-repo="LuoQaxa/weekly"
+          data-repo-id="R_kgDOKufayA"
           data-category="General"
-          data-category-id="DIC_kwDOG4TsQM4CR4bV"
+          data-category-id="DIC_kwDOKufayM4Cc-vp"
           data-mapping="title"
           data-strict="0"
           data-reactions-enabled="1"
           data-emit-metadata="0"
           data-input-position="bottom"
-          data-theme="https://gw.alipayobjects.com/os/k/3gwxfz/comment.css"
+          data-theme="preferred_color_scheme"
           data-lang="zh-CN"
           data-loading="lazy"
           crossorigin="anonymous"
-          async
-        ></script>
+          async></script>
       </div>
     </main>
     <Footer />
