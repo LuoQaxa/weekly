@@ -196,14 +196,14 @@ if (postIndex < allPosts.length) {
             <Search />
           </h1>
           <slot />
-          <div class="flex align-middle justify-center mt-4">
+          <!-- <div class="flex align-middle justify-center mt-4">
             <a
               class="inline-block h-10 items-center rounded bg-[#262626] px-5 py-3 text-sm font-medium text-white pay-button"
               href="https://miaoyan.app/cats.html?name=潮流周刊"
               target="_blank"
               rel="noreferrer">喜欢周刊 → 去喂猫 ❤️</a
             >
-          </div>
+          </div> -->
           <hr />
           <div
             class="flex justify-between md:flex-row flex-col mt-2 post-footer"
@@ -220,11 +220,11 @@ if (postIndex < allPosts.length) {
               {nextUrl ? <a href={nextUrl}>下一篇 |</a> : null}
               {prevUrl ? <a href={prevUrl}>上一篇 |</a> : null}
               <a href="/">去首页 |</a>
-              <a
+              <!-- <a
                 href={`https://twitter.com/${SITE.twitterId}`}
                 target="_blank"
                 title="Follow">Twitter</a
-              >
+              > -->
               <a
                 href={`https://github.com/${SITE.githubId}/weekly`}
                 title="Star"

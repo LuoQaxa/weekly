@@ -31,7 +31,7 @@ function defaultLayoutPlugin() {
     frontmatter.pic = frontmatter.pic || SITE.pic;
 
     if (!frontmatter.date) {
-      frontmatter.date = SITE.repo === getCreateDateFormat(filePath);
+      frontmatter.date = getCreateDateFormat(filePath);
     }
 
     // 兼容没有头图的情况

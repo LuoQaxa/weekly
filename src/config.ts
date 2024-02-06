@@ -10,6 +10,6 @@ export const SITE = {
   // 暂时不提供
   blogPage: "",
   twitterId: "",
-  githubId: "",
+  githubId: "LuoQaxa",
   repo: "",
 };
