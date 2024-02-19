@@ -35,7 +35,7 @@ jobs:
     - name: Commit and push if changed
       run: |-
         git diff
-        git config --global user.email "szuoluoqian@qq.com"
+        git config --global user.email "szuluoqian@163.com"
         git config --global user.name "LuoQ"
         git pull
         git add -A
