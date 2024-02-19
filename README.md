@@ -1,5 +1,6 @@
-# luoQ生活周刊
+# 生活周刊
 
-> 记录工程师 luoQ 的不枯燥生活，欢迎订阅，也欢迎 
-* [第 1 期 - 高空画家](https://weekly.tw93.fun/posts/153-高空画家)
+> 记录工程师 LuoQ 的不枯燥生活，欢迎订阅～
 
+* [第 02 期 - 过了春节](https://thatdog.cn/posts/02-过了春节)
+* [第 01 期 - 新年伊始](https://thatdog.cn/posts/01-新年伊始)
