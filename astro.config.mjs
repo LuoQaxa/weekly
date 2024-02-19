@@ -7,7 +7,9 @@ import { parse } from "node-html-parser";
 import { SITE } from "./src/config";
 
 const DEFAULT_FORMAT = "YYYY/MM/DD";
+// TODO: 日期
 function getCreateDateFormat(filePath) {
+  console.log("filePath", fs.statSync(filePath).birthtime);
   return dayjs(fs.statSync(filePath).birthtime).format(DEFAULT_FORMAT);
 }
 
