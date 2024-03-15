@@ -5,6 +5,7 @@ import fs from "fs";
 import { defineConfig } from "astro/config";
 import { parse } from "node-html-parser";
 import { SITE } from "./src/config";
+import vercel from "@astrojs/vercel/serverless";
 
 const DEFAULT_FORMAT = "YYYY/MM/DD";
 // TODO: 日期
@@ -56,4 +57,8 @@ export default defineConfig({
   markdown: {
     remarkPlugins: [defaultLayoutPlugin],
   },
+  output: "server",
+  adapter: vercel({
+    webAnalytics: { enabled: true },
+  }),
 });
