@@ -18,7 +18,8 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "postbuild": "pagefind --site dist"
   },
   "dependencies": {
     "@pagefind/default-ui": "^1.0.4",

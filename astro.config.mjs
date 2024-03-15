@@ -57,8 +57,4 @@ export default defineConfig({
   markdown: {
     remarkPlugins: [defaultLayoutPlugin],
   },
-  output: "server",
-  adapter: vercel({
-    webAnalytics: { enabled: true },
-  }),
 });
