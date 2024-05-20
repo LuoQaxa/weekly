@@ -2,6 +2,7 @@
 
 > 记录工程师 LuoQ 的不枯燥生活，欢迎订阅～
 
+* [第 12 期 - 放假断更](https://thatdog.cn/posts/12-放假断更)
 * [第 11 期 - 感冒难受](https://thatdog.cn/posts/11-感冒难受)
 * [第 10 期 - 海棠盛宴](https://thatdog.cn/posts/10-海棠盛宴)
 * [第 09 期 - 青岛之旅](https://thatdog.cn/posts/09-青岛之旅)
